@@ -12,7 +12,7 @@ function App() {
     selected: {}, // Clicked on
   });
 
-  const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=9c632899";
+  const apiurl = "http://www.omdbapi.com/?apikey=9c632899";
 
   const search = (e) => {
     if (e.key === "Enter") {
@@ -41,6 +41,7 @@ function App() {
     axios(apiurl + "&i=" + id).then(({ data }) => {
       // Get the selected movie data
       let result = data;
+
       setState((prevState) => {
         return { ...prevState, selected: result };
       });
