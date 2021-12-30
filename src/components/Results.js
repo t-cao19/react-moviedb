@@ -5,8 +5,8 @@ import Result from "./Result";
 function Results({ results }) {
   return (
     <section className="results">
-      {results.map((results) => (
-        <Result result={result} />
+      {results.map((result) => (
+        <Result key={result.imdbID} result={result} />
       ))}
     </section>
   );
